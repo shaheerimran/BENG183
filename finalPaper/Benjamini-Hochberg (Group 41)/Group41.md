@@ -1,4 +1,5 @@
 Group 41
+
 Shaheer Imran, Corey Nguyen, Somtochukwu Ikeanyi
 
 # Controlling False Discovery Rate in RNA-Seq with Benjamini-Hochberg (BH)
@@ -72,6 +73,7 @@ The choice of alpha, the significance level in the BH procedure directly affects
 
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd-K-Kz3qCq0LrJ0paHQubGzJzwLPFf0Unb0--GODjIdTEQP6aUcYYUILx8mv_WOhXXyUn-_iNyuQC0RuTdCmD4w_XDgjF5RwU6vpAnk1SfQpq9OKjfBdgV-TouZ3ojMlA3exU_NQ?key=9oICL3L3ve8OraBENXK-GbGB)![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdRJ3HNQIkFePfACJeP-pC7bJKZUhJlzy_-nxvOYQnygdL1STd59HHkPZSCl-w8CX-TyDENmeXapgFQaidRp-oBEwMgg-XztQ6KDmXfPMA581kqOjMIAaJfWT6YOJar2rzVe0to_A?key=9oICL3L3ve8OraBENXK-GbGB)
+
 Figure: FDR control in in silico experiments and simulations. Observed FDR (y-axis) for various α-level cutoffs (x-axis). Demonstrates FDR decreases with alpha level.
 
 
@@ -90,6 +92,7 @@ One of the primary benefits of the BH procedure over more stringent methods like
 The key advantage of the BH procedure in RNA-Seq data analysis lies in its ability to find a balance between controlling false positives and maintaining the ability to detect true positives. By adjusting p-values based on their rank and the total number of tests, the BH method can adapt to the data's characteristics, providing a flexible yet robust tool for hypothesis testing. This balance is crucial for advancing biological and medical research where confirming new or unexpected results can lead to significant advancements.
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcFDAkqDc15G0UeBdgTuwIrAHKHYAYG0c50j9SSps19Gc8bzfvB_KFAefwj4ei-wdSjTbiwsiAaNbulWmr2GrS8AHlIt-PGxK3gz6TD7gwwK_qdukpYXZe2is1w_MxiRGtYJi6ZxQ?key=9oICL3L3ve8OraBENXK-GbGB)
+
 Figure: Graph plotting p-values against their rank. Top dashed line indicates alpha. Bottom dashed line indicates FWER. Solid line indicates BH. Demonstrates both statistical power and control of FDR by Benjamini Hochberg.
 
 ### 3. Practical Implications
@@ -127,6 +130,7 @@ The sequential adjustment of p-values is a distinctive feature of the Benjamini-
 The final decision in the Benjamini-Hochberg procedure involves rejecting null hypotheses for all tests where the adjusted p-values are less than or equal to a predefined threshold α, typically set at 0.05. This threshold represents the maximum proportion of false discoveries (false positives) that the researcher is willing to tolerate. By setting this criterion, the procedure ensures that the overall rate of type I errors (false positives) among all significant tests is controlled, making the findings statistically robust.
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdOqmjqlu1ZdqQTTf3aQGaiPEImoBwFTkuJvJCRug0i81drOQBTgpXmySYwCRi11r1aGwrYNO-NaXQE6KmVjiiX2zn9TfYZB_gNfVHjYRFa8rJll3u3qIuJ1Jfg21Av3b3TC8t0?key=9oICL3L3ve8OraBENXK-GbGB)
+
 Figure: Flowchart illustrating the sequential steps of the Benjamini-Hochberg procedure.
 
 Reference: Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society. Series B (Methodological), 289-300.
